@@ -10,8 +10,8 @@ function App() {
     }
 
   return (
-    <div>
-      <div className="container" onMouseMove={getMousePos}>
+    <div className='container' onMouseMove={getMousePos}>
+      <div className="grid" >
         <Box mousePos={mousePos}/>
         <Box mousePos={mousePos}/>
         <Box mousePos={mousePos}/>
