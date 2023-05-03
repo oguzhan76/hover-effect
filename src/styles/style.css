@@ -45,7 +45,7 @@ body {
     content: "";
     position: absolute;
     height: 100%;
-    width: 100%;
+    width: 100%;    
     transition: opacity 500ms;
     background: radial-gradient(
         600px circle at var(--mouse-x) var(--mouse-y),

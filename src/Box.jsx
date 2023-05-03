@@ -1,7 +1,8 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import PropTypes from 'prop-types';
 
 const Box = ({mousePos}) => {
+    const [rect, setRect] = useState({left: 0, top: 0});
     const boxref = useRef();
     const vars = useRef({
         "--mouse-x": `5000px`,
@@ -9,7 +10,10 @@ const Box = ({mousePos}) => {
     });
 
     useEffect(() => {
-        const rect = boxref.current.getBoundingClientRect()
+        setRect(boxref.current.getBoundingClientRect());
+    }, [])
+
+    useEffect(() => {
         const x = mousePos.x - rect.left;
         const y = mousePos.y - rect.top;
         vars.current = {

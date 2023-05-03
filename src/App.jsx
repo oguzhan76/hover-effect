@@ -9,7 +9,6 @@ function App() {
         setMousePos({ x: e.clientX, y: e.clientY });
     }
 
-
   return (
     <div>
       <div className="container" onMouseMove={getMousePos}>
@@ -22,4 +21,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
